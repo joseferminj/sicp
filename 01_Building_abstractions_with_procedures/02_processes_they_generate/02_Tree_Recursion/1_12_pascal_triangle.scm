@@ -28,7 +28,8 @@
    (check-equal? (pascal 0 0) 1 "First element")
    (check-equal? (pascal 0 1) 1 "Second element")
    (check-equal? (pascal 1 1) 1 "Third element")
-   (check-equal? (pascal 1 2) 2 "1,2 element")))
+   (check-equal? (pascal 1 2) 2 "1,2 element")
+   (check-equal? (pascal 2 4) 6 "2,4 element")))
 
 (run-tests pascal-tests)
 
