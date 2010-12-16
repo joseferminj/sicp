@@ -5,6 +5,9 @@
 ;; called with an integer n, prints n and checks to see if n is
 ;; prime.  If n is prime, the procedure prints three asterisks
 ;; followed by the amount of time used in performing the test.
+#lang racket
+
+(provide prime?)
 
 (define (square n)
   (* n n))
