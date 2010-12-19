@@ -52,10 +52,10 @@
 ;;; Implementing `cont-frac` function
 
 (define (cont-frac n d k)
-  (define (recur count)
-    (if (= k count)
+  (define (recur i)
+    (if (= k i)
         0
-        (/ (n k) (+ (d k) (recur (+ count 1))))))
+        (/ (n i) (+ (d i) (recur (+ i 1))))))
   (recur 0))
 
 (define (gr-aprox k)
@@ -88,10 +88,10 @@
 ;;; `cont-frac` iterative version
 
 (define (cont-frac-iter n d k)
-  (define (iter acc count)
-    (if (= count 0)
+  (define (iter acc i)
+    (if (= i 0)
         acc 
-        (iter (/ (n k) (+ (d k) acc)) (- count 1))))
+        (iter (/ (n i) (+ (d i) acc)) (- i 1))))
   (iter 0 k))
 
 (define (gr-aprox-iter k)
