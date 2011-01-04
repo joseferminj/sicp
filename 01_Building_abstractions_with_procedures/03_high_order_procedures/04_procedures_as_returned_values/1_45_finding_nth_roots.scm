@@ -41,11 +41,18 @@
           (try next))))
   (try first-guess))
 
-;;; Solution
-(define (nth-roots n)
-  (lambda (x)
-    (fixed-point (repeated (average-damp (lambda (y) (/ x (expt y n)))) n) 1.0)))
-
 (define (cube-root x)
   (fixed-point (average-damp (lambda (y) (/ x (expt y 2))))
                1.0))
+
+;;; Solution. After testing with several nth-roots, the number of average damps
+;;; required is the (round (sqrt n))
+
+(define (nth-roots n)
+  (define (repeated-avg-damp f)
+    ((repeated average-damp (round (sqrt n))) f))
+  (lambda (x)
+    (fixed-point (repeated-avg-damp (lambda (y) (/ x (expt y (- n 1)))))
+                 1.0)))
+
+
