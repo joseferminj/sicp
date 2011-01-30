@@ -5,9 +5,9 @@ Progress
 --------
 
 * *Chapter 1. Building Abstraction with Procedures. 46/46 exercises done.*
-* Chapter 2. Building Abstraction with Data. 16/97 exercises done.
+* Chapter 2. Building Abstraction with Data. 23/97 exercises done.
 * Chapter 3. Modularity, Objects, and State. 0/38 exercises done.
 * Chapter 4. Metalinguistic Abstraction. 0/79 exercises done.
 * Chapter 5. Computing with register machines. 0/52 exercises done.
 
-Total 62/312 exercises 20%
+Total 69/312 exercises 22%
